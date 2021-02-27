@@ -5,6 +5,7 @@ import fetchCountries from './js/fetch-countries';
 const refs = {
   countriesContainer: document.querySelector('.js-countries'),
   inputForm: document.querySelector('.js-form'),
+  inputMain: document.querySelector('.input'),
 };
 
 var debounce = require('lodash.debounce');
@@ -14,6 +15,8 @@ const debounceCallback = debounce(event => {
 
   fetchCountries(name).then(updateCountries);
   refs.countriesContainer.innerHTML = '';
-}, 500);
+  refs.inputForm.reset();
+}, 1000);
 
 refs.inputForm.addEventListener('input', debounceCallback);
+

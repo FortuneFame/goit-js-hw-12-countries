@@ -35,6 +35,8 @@ body {
   margin-right: auto;
   padding-left: 50px;
   border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 40px;
   background: #2b303b;
   color: #63717f;

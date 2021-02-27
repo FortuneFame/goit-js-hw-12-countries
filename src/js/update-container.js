@@ -12,13 +12,13 @@ function updateCountries(data) {
 
   if (data.length === 1) {
     refs.countriesContainer.insertAdjacentHTML('beforeend', markapOneCountries);
-  } else if ((data.length > 1) & (data.length < 11)) {
+  } else if ((data.length > 2) & (data.length < 10)) {
     refs.countriesContainer.insertAdjacentHTML('beforeend', markapCountries);
   } else if (data.length > 10) {
     PNotify.alert(
       'Too many matches found. Please enter a more specific query!',
     );
-  }
+  } 
 }
 
 export default updateCountries;
