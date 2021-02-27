@@ -16,7 +16,7 @@ const debounceCallback = debounce(event => {
   fetchCountries(name).then(updateCountries);
   refs.countriesContainer.innerHTML = '';
   refs.inputForm.reset();
-}, 1000);
+}, 1400);
 
 refs.inputForm.addEventListener('input', debounceCallback);
 
